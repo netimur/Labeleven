@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.view.authorization.AuthorizationFragment">
+
+
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_large_margin"
+        android:text="@string/add_melting"
+        android:textSize="24sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/brand_code_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/brand_code_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:layout_marginTop="@dimen/regular_margin"
+            android:layout_marginEnd="@dimen/regular_margin"
+            android:backgroundTint="@color/wp_edit_text_underline_color"
+            android:hint="@string/brand_code"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="14sp"
+            app:backgroundTint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/worker_code_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brand_code_text_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/worker_code_edit_text"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/regular_margin"
+            android:backgroundTint="@color/wp_edit_text_underline_color"
+            android:hint="@string/worker_code"
+            android:textColorHighlight="#CBCBCB"
+            android:textSize="14sp"
+            app:backgroundTint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/department_code_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/worker_code_text_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/department_code_edit_text"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/regular_margin"
+            android:backgroundTint="@color/wp_edit_text_underline_color"
+            android:hint="@string/department_code"
+            android:textColorHighlight="#CBCBCB"
+            android:textSize="14sp"
+            app:backgroundTint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/oven_code_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/department_code_text_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="number"
+            android:id="@+id/oven_code_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/regular_margin"
+            android:backgroundTint="@color/wp_edit_text_underline_color"
+            android:hint="@string/oven_code"
+            android:textColorHighlight="#CBCBCB"
+            android:textSize="14sp"
+            app:backgroundTint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/date_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/oven_code_text_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="date"
+            android:id="@+id/date_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/regular_margin"
+            android:backgroundTint="@color/wp_edit_text_underline_color"
+            android:hint="@string/date"
+            android:textColorHighlight="#CBCBCB"
+            android:textSize="14sp"
+            app:backgroundTint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/note_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_text_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/note_edit_text"
+            android:maxLength="200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/regular_margin"
+            android:backgroundTint="@color/wp_edit_text_underline_color"
+            android:hint="@string/note"
+            android:textColorHighlight="#CBCBCB"
+            android:textSize="14sp"
+            app:backgroundTint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/quantity_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/note_text_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/quantity_edit_text"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/regular_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/regular_margin"
+            android:backgroundTint="@color/wp_edit_text_underline_color"
+            android:hint="@string/quantity"
+            android:textColorHighlight="#CBCBCB"
+            android:textSize="14sp"
+            app:backgroundTint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/regular_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/regular_margin"
+        android:enabled="true"
+        android:letterSpacing="0"
+        android:paddingVertical="@dimen/small_padding"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textSize="@dimen/registration_button_text_size"
+        app:cornerRadius="@dimen/registration_buttons_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quantity_text_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/elementsViewFragment">
+
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="com.netimur.labeleven.presentation.view.authorization.AuthorizationFragment"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" />
+    <fragment
+        android:id="@+id/addMeltingFragment"
+        android:name="com.netimur.labeleven.presentation.view.addmelting.AddMeltingFragment"
+        android:label="AddMeltingFragment" />
+    <fragment
+        android:id="@+id/elementsViewFragment"
+        android:name="com.netimur.labeleven.presentation.view.elements.ElementsViewFragment"
+        android:label="fragment_elements_view"
+        tools:layout="@layout/fragment_elements_view" />
+</navigation>
