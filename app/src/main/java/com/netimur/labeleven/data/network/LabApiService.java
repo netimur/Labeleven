@@ -2,8 +2,8 @@ package com.netimur.labeleven.data.network;
 
 import android.util.Log;
 
-import com.netimur.labeleven.domain.common.ResponseCallback;
-import com.netimur.labeleven.domain.common.ResponseHandler;
+import com.netimur.labeleven.utils.ResponseCallback;
+import com.netimur.labeleven.utils.ResponseHandler;
 
 import retrofit2.Call;
 

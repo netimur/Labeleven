@@ -1,10 +1,16 @@
 package com.netimur.labeleven.domain.entity;
 
-public class Employee {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Employee implements Parcelable {
     private int code;
     private String name;
     private int departmentCode;
 
+
+    public Employee() {
+    }
 
     public Employee(int code, String name, int departmentCode) {
         this.code = code;
@@ -34,5 +40,15 @@ public class Employee {
 
     public void setDepartmentCode(int departmentCode) {
         this.departmentCode = departmentCode;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+
     }
 }

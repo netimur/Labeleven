@@ -35,6 +35,9 @@ android {
 
 dependencies {
 
+
+    implementation 'com.squareup.retrofit2:converter-jackson:2.1.0'
+
     implementation "androidx.fragment:fragment:1.4.1"
 
     // https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit

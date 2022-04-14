@@ -7,16 +7,123 @@
 
     <fragment
         android:id="@+id/authorizationFragment"
-        android:name="com.netimur.labeleven.presentation.view.authorization.AuthorizationFragment"
+        android:name="com.netimur.labeleven.ui.authorization.AuthorizationFragment"
         android:label="fragment_authorization"
-        tools:layout="@layout/fragment_authorization" />
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorizationFragment_to_workerMainMenuFragment"
+            app:destination="@id/workerMainMenuFragment" />
+        <action
+            android:id="@+id/action_authorizationFragment_to_directorMainMenuFragment"
+            app:destination="@id/directorMainMenuFragment" />
+        <action
+            android:id="@+id/action_authorizationFragment_to_departmentChiefMainMenuFragment"
+            app:destination="@id/departmentChiefMainMenuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addMeltingFragment"
-        android:name="com.netimur.labeleven.presentation.view.addmelting.AddMeltingFragment"
-        android:label="AddMeltingFragment" />
+        android:name="com.netimur.labeleven.ui.addmelting.AddMeltingFragment"
+        android:label="AddMeltingFragment" >
+        <action
+            android:id="@+id/action_addMeltingFragment_to_workerMainMenuFragment"
+            app:destination="@id/workerMainMenuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/elementsViewFragment"
-        android:name="com.netimur.labeleven.presentation.view.elements.ElementsViewFragment"
+        android:name="com.netimur.labeleven.ui.elementsview.ElementsViewFragment"
         android:label="fragment_elements_view"
         tools:layout="@layout/fragment_elements_view" />
+    <fragment
+        android:id="@+id/addEmployeeFragment"
+        android:name="com.netimur.labeleven.ui.addemployee.AddEmployeeFragment"
+        android:label="AddEmployeeFragment" />
+    <fragment
+        android:id="@+id/departmentsViewFragment"
+        android:name="com.netimur.labeleven.ui.departmentsview.DepartmentsViewFragment"
+        android:label="fragment_departments_view"
+        tools:layout="@layout/fragment_departments_view" />
+    <fragment
+        android:id="@+id/workerMainMenuFragment"
+        android:name="com.netimur.labeleven.ui.mainmenu.WorkerMainMenuFragment"
+        android:label="fragment_worker_main_menu"
+        tools:layout="@layout/fragment_worker_main_menu" >
+        <action
+            android:id="@+id/action_workerMainMenuFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment" />
+        <action
+            android:id="@+id/action_workerMainMenuFragment_to_addMeltingFragment"
+            app:destination="@id/addMeltingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/directorMainMenuFragment"
+        android:name="com.netimur.labeleven.ui.mainmenu.DirectorMainMenuFragment"
+        android:label="fragment_director_main_menu"
+        tools:layout="@layout/fragment_director_main_menu" >
+        <action
+            android:id="@+id/action_directorMainMenuFragment_to_departmentsViewFragment"
+            app:destination="@id/departmentsViewFragment" />
+        <action
+            android:id="@+id/action_directorMainMenuFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment" />
+        <action
+            android:id="@+id/action_directorMainMenuFragment_to_reportsMenuFragment"
+            app:destination="@id/reportsMenuFragment" />
+        <action
+            android:id="@+id/action_directorMainMenuFragment_to_staffViewFragment"
+            app:destination="@id/staffViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/departmentChiefMainMenuFragment"
+        android:name="com.netimur.labeleven.ui.mainmenu.DepartmentChiefMainMenuFragment"
+        android:label="fragment_department_chief_main_menu"
+        tools:layout="@layout/fragment_department_chief_main_menu" >
+        <action
+            android:id="@+id/action_departmentChiefMainMenuFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment" />
+        <action
+            android:id="@+id/action_departmentChiefMainMenuFragment_to_addEmployeeFragment"
+            app:destination="@id/addEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportsMenuFragment"
+        android:name="com.netimur.labeleven.ui.reports.ReportsMenuFragment"
+        android:label="fragment_reports_menu"
+        tools:layout="@layout/fragment_reports_menu" >
+        <action
+            android:id="@+id/action_reportsMenuFragment_to_directorMainMenuFragment"
+            app:destination="@id/directorMainMenuFragment" />
+        <action
+            android:id="@+id/action_reportsMenuFragment_to_firstReportFragment"
+            app:destination="@id/firstReportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/staffViewFragment"
+        android:name="com.netimur.labeleven.ui.staffview.StaffViewFragment"
+        android:label="fragment_staff_view"
+        tools:layout="@layout/fragment_staff_view" >
+        <action
+            android:id="@+id/action_staffViewFragment_to_workerViewFragment"
+            app:destination="@id/workerViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workerViewFragment"
+        android:name="com.netimur.labeleven.ui.workerview.WorkerViewFragment"
+        android:label="fragment_worker_view"
+        tools:layout="@layout/fragment_worker_view" >
+        <argument
+            android:name="Employee"
+            app:argType="com.netimur.labeleven.domain.entity.Employee" />
+        <action
+            android:id="@+id/action_workerViewFragment_to_staffViewFragment"
+            app:destination="@id/staffViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstReportFragment"
+        android:name="com.netimur.labeleven.ui.reports.FirstReportFragment"
+        android:label="fragment_first_report"
+        tools:layout="@layout/fragment_first_report" >
+        <action
+            android:id="@+id/action_firstReportFragment_to_reportsMenuFragment"
+            app:destination="@id/reportsMenuFragment" />
+    </fragment>
 </navigation>

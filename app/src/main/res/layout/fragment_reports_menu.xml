@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.reports.ReportsMenuFragment">
+
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:text="@string/reports"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/avrg_value_of_chem_element"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/regular_margin"
+        android:layout_marginTop="@dimen/regular_margin"
+        android:layout_marginEnd="@dimen/regular_margin"
+        android:enabled="true"
+        android:letterSpacing="0"
+        android:paddingVertical="@dimen/small_padding"
+        android:text="@string/first_report"
+        android:textAllCaps="false"
+        android:textSize="@dimen/registration_button_text_size"
+        app:cornerRadius="@dimen/registration_buttons_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/steel_brands_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/regular_margin"
+        android:layout_marginTop="@dimen/xsmall_margin"
+        android:layout_marginEnd="@dimen/regular_margin"
+        android:enabled="true"
+        android:letterSpacing="0"
+        android:paddingVertical="@dimen/small_padding"
+        android:text="@string/second_report"
+        android:textAllCaps="false"
+        android:textSize="@dimen/registration_button_text_size"
+        app:cornerRadius="@dimen/registration_buttons_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avrg_value_of_chem_element" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/meltings_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/regular_margin"
+        android:layout_marginTop="@dimen/xsmall_margin"
+        android:layout_marginEnd="@dimen/regular_margin"
+        android:enabled="true"
+        android:letterSpacing="0"
+        android:paddingVertical="@dimen/small_padding"
+        android:text="@string/third_report"
+        android:textAllCaps="false"
+        android:textSize="@dimen/registration_button_text_size"
+        app:cornerRadius="@dimen/registration_buttons_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/steel_brands_list" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/summary_statement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/regular_margin"
+        android:layout_marginTop="@dimen/xsmall_margin"
+        android:layout_marginEnd="@dimen/regular_margin"
+        android:enabled="true"
+        android:letterSpacing="0"
+        android:paddingVertical="@dimen/small_padding"
+        android:text="@string/fourth_report"
+        android:textAllCaps="false"
+        android:textSize="@dimen/registration_button_text_size"
+        app:cornerRadius="@dimen/registration_buttons_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/meltings_count" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/chem_elements_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/regular_margin"
+        android:layout_marginTop="@dimen/xsmall_margin"
+        android:layout_marginEnd="@dimen/regular_margin"
+        android:enabled="true"
+        android:letterSpacing="0"
+        android:paddingVertical="@dimen/small_padding"
+        android:text="@string/fifth_report"
+        android:textAllCaps="false"
+        android:textSize="@dimen/registration_button_text_size"
+        app:cornerRadius="@dimen/registration_buttons_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/summary_statement" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/brand_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/regular_margin"
+        android:layout_marginTop="@dimen/xsmall_margin"
+        android:layout_marginEnd="@dimen/regular_margin"
+        android:enabled="true"
+        android:letterSpacing="0"
+        android:paddingVertical="@dimen/small_padding"
+        android:text="@string/sixth_report"
+        android:textAllCaps="false"
+        android:textSize="@dimen/registration_button_text_size"
+        app:cornerRadius="@dimen/registration_buttons_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chem_elements_list" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

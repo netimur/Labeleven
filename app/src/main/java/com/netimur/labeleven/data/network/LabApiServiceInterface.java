@@ -1,6 +1,6 @@
 package com.netimur.labeleven.data.network;
 
-import com.netimur.labeleven.domain.common.ResponseCallback;
+import com.netimur.labeleven.utils.ResponseCallback;
 
 public interface LabApiServiceInterface<T>{
 
