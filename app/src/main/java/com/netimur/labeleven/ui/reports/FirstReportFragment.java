@@ -34,7 +34,7 @@ public class FirstReportFragment extends Fragment implements FirstReportContract
 
     @Override
     public void setData(ArrayList<FirstReportBody> data) {
-
+        this.binding.textview.setText(data.toString());
     }
 
     @Override

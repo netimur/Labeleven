@@ -21,4 +21,11 @@ public class ThirdReportBody {
     }
 
 
+    @Override
+    public String toString() {
+        return "\nПлавка:" +
+
+                "за " + month + " месяц." +
+                "количество=" + count;
+    }
 }

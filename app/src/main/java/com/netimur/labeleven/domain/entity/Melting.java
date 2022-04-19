@@ -12,6 +12,20 @@ public class Melting {
     private String note;
     private float quantity;
 
+    @Override
+    public String toString() {
+        return "\nMelting:" +
+                "code=" + code +
+                ", brandCode=" + brandCode +
+                ", workerCode=" + workerCode +
+                ", departmentCode=" + departmentCode +
+                ", ovenCode=" + ovenCode +
+                ", date=" + date +
+                ", note='" + note + '\'' +
+                ", quantity=" + quantity +
+                '}';
+    }
+
     public Melting() {
     }
 

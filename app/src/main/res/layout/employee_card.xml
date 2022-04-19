@@ -14,7 +14,7 @@
         android:id="@+id/constaint_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/my_primary">
+        android:background="@color/my_secondary">
 
         <TextView
             android:id="@+id/employee_name"
@@ -30,7 +30,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Netimur" />
+            tools:text="Netimur Will Not" />
 
         <TextView
             android:id="@+id/employee_department_code"

@@ -1,107 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.authorization.AuthorizationFragment">
-
-
+    tools:context=".ui.reports.FifthReportFragment">
 
     <TextView
-        android:id="@+id/label"
+        android:id="@+id/report_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/xxlarge_margin"
-        android:text="@string/laboratory_label"
-        android:textSize="24sp"
-        app:fontFamily="@font/inter_semibold"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@id/month_text_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/login_text_layout"
+        android:id="@+id/depr_text_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/regular_margin"
+        app:layout_constraintBottom_toTopOf="@id/month_text_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label">
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/login_edit_text"
+            android:id="@+id/dept_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/regular_margin"
-            android:layout_marginTop="@dimen/xxlarge_margin"
+            android:layout_marginTop="@dimen/medium_margin"
             android:layout_marginEnd="@dimen/regular_margin"
             android:backgroundTint="@color/wp_edit_text_underline_color"
-            android:hint="@string/login"
+            android:hint="@string/department_code"
+
+            android:inputType="number"
             android:textSize="14sp"
             app:backgroundTint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password_edit_text_layout"
+        android:id="@+id/month_text_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/regular_margin"
+        app:layout_constraintBottom_toTopOf="@id/get_report_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_text_layout">
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_edit_text"
+            android:id="@+id/month_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/regular_margin"
-            android:layout_marginTop="@dimen/medium_large_margin"
             android:layout_marginEnd="@dimen/regular_margin"
             android:backgroundTint="@color/wp_edit_text_underline_color"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:textColorHighlight="#CBCBCB"
+            android:hint="@string/month"
+            android:inputType="number"
             android:textSize="14sp"
             app:backgroundTint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/continue_button"
+        android:id="@+id/get_report_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/regular_margin"
-        android:layout_marginTop="@dimen/medium_large_margin"
+        android:layout_marginTop="@dimen/mega_large_margin"
         android:layout_marginEnd="@dimen/regular_margin"
+        android:layout_marginBottom="@dimen/regular_margin"
         android:enabled="true"
         android:letterSpacing="0"
         android:paddingVertical="@dimen/small_padding"
-        android:text="@string/enter"
+        android:text="@string/get_report"
         android:textAllCaps="false"
         android:textSize="@dimen/registration_button_text_size"
         app:cornerRadius="@dimen/registration_buttons_corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password_edit_text_layout" />
-    <TextView
-        android:id="@+id/forgot_password_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/continue_button"
-        android:layout_marginTop="@dimen/small_margin"
-        android:text="@string/i_forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/have_no_account_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/regular_margin"
-        android:text="@string/have_no_account_yet"
-        app:layout_constraintEnd_toEndOf="@id/continue_button"
-        app:layout_constraintTop_toBottomOf="@id/forgot_password_button" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,5 @@
 package com.netimur.labeleven.ui.workerview;
 
-import com.netimur.labeleven.utils.Constants;
 import com.netimur.labeleven.utils.AbstractPresenter;
 import com.netimur.labeleven.utils.ResponseCallback;
 import com.netimur.labeleven.domain.entity.Employee;
@@ -9,7 +8,6 @@ public class WorkerViewPresenter extends AbstractPresenter implements ResponseCa
 
     private final WorkerViewContract.View view;
     private Employee currentEmployee;
-
 
 
     public WorkerViewPresenter(WorkerViewContract.View view) {
@@ -29,8 +27,9 @@ public class WorkerViewPresenter extends AbstractPresenter implements ResponseCa
 
     @Override
     public void onDeleteButtonClick() {
-        String employeeCode = String.valueOf(this.currentEmployee.getCode());
-        labApi.deleteRequest(Constants.STAFF_ENDPOINT + "/" + employeeCode, this);
+        int employeeCode = this.currentEmployee.getCode();
+        labApi.deleteEmployee(employeeCode, this);
+
     }
 
     @Override

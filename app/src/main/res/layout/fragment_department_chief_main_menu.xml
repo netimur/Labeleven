@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/xxlarge_margin"
-        android:text="Department chief"
+        android:textStyle="bold"
+        android:text="@string/department_chief"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/regular_margin"
-        android:layout_marginTop="@dimen/medium_large_margin"
+        android:layout_marginTop="@dimen/xxlarge_margin"
         android:layout_marginEnd="@dimen/regular_margin"
         android:enabled="true"
         android:letterSpacing="0"
@@ -41,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/regular_margin"
-        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginTop="@dimen/regular_margin"
         android:layout_marginEnd="@dimen/regular_margin"
         android:enabled="true"
         android:letterSpacing="0"
@@ -55,23 +56,22 @@
         app:layout_constraintTop_toBottomOf="@id/staff_view_button" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/register_melting_button"
+        android:id="@+id/meltings_list_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/regular_margin"
-        android:layout_marginTop="@dimen/medium_large_margin"
+        android:layout_marginTop="@dimen/regular_margin"
         android:layout_marginEnd="@dimen/regular_margin"
         android:enabled="true"
         android:letterSpacing="0"
         android:paddingVertical="@dimen/small_padding"
-        android:text="@string/register_melting"
+        android:text="@string/meltings_list"
         android:textAllCaps="false"
         android:textSize="@dimen/registration_button_text_size"
         app:cornerRadius="@dimen/registration_buttons_corner_radius"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/oven_view_button" />
 
     <TextView
         android:id="@+id/logout_button"

@@ -11,7 +11,7 @@ public interface FifthReportContract {
     }
 
     interface Presenter {
-        void getData();
+        void getData(String month);
     }
 
 }

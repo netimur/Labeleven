@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.authorization.AuthorizationFragment">
+    tools:context=".ui.impuritymelting.EditImpurityMeltingFragment">
 
 
 
@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/xxlarge_margin"
-        android:text="@string/laboratory_label"
+        android:text="@string/component_melting_editing"
         android:textSize="24sp"
         app:fontFamily="@font/inter_semibold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,8 +21,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/login_text_layout"
+        android:id="@+id/melting_number_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,78 +31,56 @@
         app:layout_constraintTop_toBottomOf="@id/label">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/login_edit_text"
+            android:id="@+id/melting_layout_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/regular_margin"
-            android:layout_marginTop="@dimen/xxlarge_margin"
+            android:layout_marginTop="@dimen/mega_large_margin"
             android:layout_marginEnd="@dimen/regular_margin"
             android:backgroundTint="@color/wp_edit_text_underline_color"
-            android:hint="@string/login"
+            android:hint="@string/melting_number"
             android:textSize="14sp"
             app:backgroundTint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password_edit_text_layout"
+        android:id="@+id/element_code_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_text_layout">
+        app:layout_constraintTop_toBottomOf="@id/melting_number_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_edit_text"
+            android:id="@+id/element_code_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/regular_margin"
-            android:layout_marginTop="@dimen/medium_large_margin"
+            android:layout_marginTop="@dimen/regular_margin"
             android:layout_marginEnd="@dimen/regular_margin"
             android:backgroundTint="@color/wp_edit_text_underline_color"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:textColorHighlight="#CBCBCB"
+            android:hint="@string/element_number"
             android:textSize="14sp"
             app:backgroundTint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/continue_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/regular_margin"
-        android:layout_marginTop="@dimen/medium_large_margin"
+        android:layout_marginTop="@dimen/xxlarge_margin"
         android:layout_marginEnd="@dimen/regular_margin"
         android:enabled="true"
         android:letterSpacing="0"
         android:paddingVertical="@dimen/small_padding"
-        android:text="@string/enter"
+        android:text="@string/edit"
         android:textAllCaps="false"
         android:textSize="@dimen/registration_button_text_size"
         app:cornerRadius="@dimen/registration_buttons_corner_radius"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password_edit_text_layout" />
-    <TextView
-        android:id="@+id/forgot_password_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/continue_button"
-        android:layout_marginTop="@dimen/small_margin"
-        android:text="@string/i_forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/have_no_account_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/regular_margin"
-        android:text="@string/have_no_account_yet"
-        app:layout_constraintEnd_toEndOf="@id/continue_button"
-        app:layout_constraintTop_toBottomOf="@id/forgot_password_button" />
-
+        app:layout_constraintTop_toBottomOf="@id/element_code_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

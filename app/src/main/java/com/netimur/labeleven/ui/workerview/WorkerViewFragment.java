@@ -45,5 +45,9 @@ public class WorkerViewFragment extends Fragment implements WorkerViewContract.V
         Toast.makeText(requireContext(), "Error while dismissing employee", Toast.LENGTH_SHORT).show();
     }
 
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        this.binding = null;
+    }
 }

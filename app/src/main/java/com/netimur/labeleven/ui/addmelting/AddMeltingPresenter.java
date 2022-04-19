@@ -7,7 +7,7 @@ import com.netimur.labeleven.domain.entity.Melting;
 
 import java.util.Date;
 
-public class AddMeltingPresenter extends AbstractPresenter implements AddMeltingContract.Presenter, ResponseCallback {
+public class AddMeltingPresenter extends AbstractPresenter implements AddMeltingContract.Presenter, ResponseCallback<Object> {
     private final AddMeltingContract.View view;
 
     public AddMeltingPresenter(AddMeltingContract.View view) {
@@ -18,7 +18,12 @@ public class AddMeltingPresenter extends AbstractPresenter implements AddMelting
     public void onAddMeltingButtonClick(int code, int brandCode, int workerCode, int departmentCode, int ovenCode, Date date, String note, float quantity) {
 
         Melting melting = new Melting(code, brandCode, workerCode, departmentCode, ovenCode, (java.sql.Date) date, note, quantity);
+
+        labApi.createMelting(melting, this);
+
+/*
         labApi.postRequest(Constants.MELTINGS_ENDPOINT, melting, this);
+*/
 
     }
 

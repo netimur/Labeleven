@@ -9,24 +9,30 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.netimur.labeleven.R;
+import com.netimur.labeleven.databinding.FragmentThirdReportBinding;
 import com.netimur.labeleven.domain.entity.ThirdReportBody;
 
 import java.util.ArrayList;
 
 
 public class ThirdReportFragment extends Fragment implements ThirdReportContract.View {
+    private FragmentThirdReportBinding binding;
+    private ThirdReportContract.Presenter presenter;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_third_report, container, false);
+        binding = FragmentThirdReportBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+        this.presenter = new ThirdReportPresenter(this);
+        this.presenter.getData();
+        return view;
     }
 
     @Override
     public void setData(ArrayList<ThirdReportBody> bodies) {
-
+        this.binding.reportTextView.setText(bodies.toString());
     }
 
     @Override

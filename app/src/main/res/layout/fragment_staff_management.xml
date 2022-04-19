@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mainmenu.WorkerMainMenuFragment">
+    tools:context=".ui.reports.ReportsMenuFragment">
+
 
     <TextView
         android:id="@+id/label"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/xxlarge_margin"
-        android:text="@string/worker"
+        android:layout_marginTop="@dimen/large_margin"
+        android:text="@string/staff_management"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/register_melting_button"
+        android:id="@+id/staff_list_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/regular_margin"
@@ -29,64 +29,50 @@
         android:enabled="true"
         android:letterSpacing="0"
         android:paddingVertical="@dimen/small_padding"
-        android:text="@string/register_melting"
+        android:text="@string/staff_list"
         android:textAllCaps="false"
         android:textSize="@dimen/registration_button_text_size"
         app:cornerRadius="@dimen/registration_buttons_corner_radius"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="@id/label" />
-
+        app:layout_constraintTop_toBottomOf="@id/label" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/edit_component_melting"
+        android:id="@+id/add_employee_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/regular_margin"
-        android:layout_marginTop="@dimen/medium_large_margin"
+        android:layout_marginTop="@dimen/xsmall_margin"
         android:layout_marginEnd="@dimen/regular_margin"
         android:enabled="true"
         android:letterSpacing="0"
         android:paddingVertical="@dimen/small_padding"
-        android:text="@string/edit_component_melting"
+        android:text="@string/add_employee"
         android:textAllCaps="false"
         android:textSize="@dimen/registration_button_text_size"
         app:cornerRadius="@dimen/registration_buttons_corner_radius"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register_melting_button" />
+        app:layout_constraintTop_toBottomOf="@id/staff_list_button" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/edit_impurity_melting"
+        android:id="@+id/dismiss_employee_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/regular_margin"
-        android:layout_marginTop="@dimen/medium_large_margin"
+        android:layout_marginTop="@dimen/xsmall_margin"
         android:layout_marginEnd="@dimen/regular_margin"
         android:enabled="true"
         android:letterSpacing="0"
         android:paddingVertical="@dimen/small_padding"
-        android:text="@string/edit_impurity_melting"
+        android:text="@string/dismiss_employee"
         android:textAllCaps="false"
         android:textSize="@dimen/registration_button_text_size"
         app:cornerRadius="@dimen/registration_buttons_corner_radius"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_component_melting" />
+        app:layout_constraintTop_toBottomOf="@id/add_employee_button" />
 
-
-    <TextView
-        android:id="@+id/logout_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/small_margin"
-        android:text="@string/logout"
-        android:textColor="#A32824"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

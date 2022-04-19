@@ -10,7 +10,7 @@ public interface SecondReportContract {
     }
 
     interface Presenter {
-        void getData();
+        void getData(String month);
     }
 
 }

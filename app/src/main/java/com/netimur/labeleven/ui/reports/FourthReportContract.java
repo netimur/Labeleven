@@ -11,7 +11,7 @@ public interface FourthReportContract {
     }
 
     interface Presenter {
-        void getData();
+        void getData(String deptId, String month);
     }
 
 }

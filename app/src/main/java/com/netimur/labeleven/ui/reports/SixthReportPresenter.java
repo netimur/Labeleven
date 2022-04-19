@@ -7,7 +7,7 @@ import com.netimur.labeleven.domain.entity.SixthReportBody;
 
 import java.util.ArrayList;
 
-public class SixthReportPresenter extends AbstractPresenter implements ResponseCallback, SixthReportContract.Presenter {
+public class SixthReportPresenter extends AbstractPresenter implements ResponseCallback<ArrayList<SixthReportBody>>, SixthReportContract.Presenter {
 
     private final SixthReportContract.View view;
 
@@ -15,11 +15,10 @@ public class SixthReportPresenter extends AbstractPresenter implements ResponseC
         this.view = view;
     }
 
-    //TODO настроить
-    @Override
-    public void onSuccess(Object response) {
 
-        view.setData((ArrayList<SixthReportBody>) response);
+    @Override
+    public void onSuccess(ArrayList<SixthReportBody> response) {
+        view.setData(response);
     }
 
     @Override
@@ -29,6 +28,6 @@ public class SixthReportPresenter extends AbstractPresenter implements ResponseC
 
     @Override
     public void getData() {
-        labApi.getRequest(Constants.SIXTH_REPORT_ENDPOINT, this);
+        labApi.getSixthReport(this);
     }
 }

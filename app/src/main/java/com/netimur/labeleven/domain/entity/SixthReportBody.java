@@ -9,6 +9,15 @@ public class SixthReportBody {
         this.quantity = quantity;
     }
 
+
+    @Override
+    public String toString() {
+        return "В этом году выплавлено{" +
+                "марки='" + name + '\'' +
+                ", количество=" + quantity +
+                '}';
+    }
+
     public String getName() {
         return name;
     }

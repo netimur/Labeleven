@@ -26,4 +26,13 @@ public class FirstReportBody {
         this.averageValue = averageValue;
 
     }
+
+    @Override
+    public String toString() {
+        return "FirstReportBody{" +
+                "brandCode=" + brandCode +
+                ", elementCode=" + elementCode +
+                ", averageValue=" + averageValue +
+                '}';
+    }
 }

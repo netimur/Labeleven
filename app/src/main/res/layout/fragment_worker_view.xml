@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/xxlarge_margin"
-        android:text="Worker"
+        android:text="@string/worker"
+        android:textStyle="bold"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +36,7 @@
         android:layout_marginStart="@dimen/regular_margin"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/name_label"
-        tools:text="Netimur Netimur Netimur"/>
+        tools:text="God Will"/>
 
     <TextView
         android:id="@+id/department_code_label"

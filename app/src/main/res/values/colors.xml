@@ -11,5 +11,7 @@
     <color name="my_primary">#F5499E</color>
 -->
     <color name="my_primary">#F06417</color>
+    <color name="my_secondary">#02a0da</color>
+    <color name="pastel_blue">#97cded</color>
     <color name="wp_edit_text_underline_color">#CBCBCB</color>
 </resources>

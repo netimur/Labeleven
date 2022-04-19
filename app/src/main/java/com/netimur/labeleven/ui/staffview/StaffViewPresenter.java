@@ -8,7 +8,7 @@ import com.netimur.labeleven.domain.entity.Employee;
 
 import java.util.ArrayList;
 
-public class StaffViewPresenter extends AbstractPresenter implements StaffViewContract.Presenter, ResponseCallback {
+public class StaffViewPresenter extends AbstractPresenter implements StaffViewContract.Presenter, ResponseCallback<ArrayList<Employee>> {
 
     private final StaffViewContract.View view;
 
@@ -18,19 +18,16 @@ public class StaffViewPresenter extends AbstractPresenter implements StaffViewCo
 
     @Override
     public void getData() {
-        labApi.getRequest(Constants.STAFF_ENDPOINT, this);
+
+        labApi.getStaff(this);
+
+
     }
 
+
     @Override
-    public void onSuccess(Object response) {
-        ArrayList<Employee> staff = new ArrayList<>();
-        ObjectMapper mapper = new ObjectMapper();
-        for (Object object: (ArrayList)response
-        ) {
-            Employee employee = mapper.convertValue(object, Employee.class);
-            staff.add(employee);
-        }
-        view.setData(staff);
+    public void onSuccess(ArrayList<Employee> response) {
+        view.setData(response);
     }
 
     @Override

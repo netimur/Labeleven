@@ -4,20 +4,24 @@ import android.util.Log;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
+import com.netimur.labeleven.data.network.RetrofitInstance;
 import com.netimur.labeleven.utils.Constants;
 import com.netimur.labeleven.utils.AbstractPresenter;
 import com.netimur.labeleven.utils.ResponseCallback;
 import com.netimur.labeleven.domain.entity.Element;
+import com.netimur.labeleven.utils.ResponseHandler;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
-import okhttp3.Response;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
-public class ElementsPresenter extends AbstractPresenter implements ElementsViewContract.Presenter, ResponseCallback<Object>{
+public class ElementsPresenter extends AbstractPresenter implements ElementsViewContract.Presenter, ResponseCallback<ArrayList<Element>> {
 
     private final ElementsViewContract.View view;
+
     public ElementsPresenter(ElementsViewContract.View view) {
         this.view = view;
     }
@@ -41,35 +45,9 @@ public class ElementsPresenter extends AbstractPresenter implements ElementsView
     }*/
 
 
-
-
     @Override
-    public void onSuccess(Object response) {
-        Log.d("MyTag", "Response to string: " + response.toString());
-        Log.d("MyTag", response.getClass().toString());
-
-        ArrayList<Element> elements = new ArrayList<>();
-
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        CollectionType collectionType = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Element.class);
-        try {
-            Log.d("MyTag", "Response parsed by objectMapper + collectionType" + objectMapper.readValue(response.toString(), collectionType));
-        } catch (IOException e) {
-            Log.d("MyTag", e.toString());
-
-        }
-
-
-        ObjectMapper mapper = new ObjectMapper();
-        for (Object object: (ArrayList)response
-             ) {
-            Element element = mapper.convertValue(object, Element.class);
-            elements.add(element);
-        }
-
-
-        view.setData(elements);
+    public void onSuccess(ArrayList<Element> response) {
+        view.setData(response);
     }
 
     @Override
@@ -79,6 +57,18 @@ public class ElementsPresenter extends AbstractPresenter implements ElementsView
 
     @Override
     public void getData() {
-        labApi.getRequest(Constants.ELEMENTS_ENDPOINT, this);
+        Call<ArrayList<Element>> call = RetrofitInstance.getInstance().getLabApi().getElements();
+        ResponseHandler<ArrayList<Element>> responseHandler = new ResponseHandler<>(new ResponseCallback<ArrayList<Element>>() {
+            @Override
+            public void onSuccess(ArrayList<Element> response) {
+                view.setData(response);
+            }
+
+            @Override
+            public void onError() {
+                view.onError();
+            }
+        });
+        call.enqueue(responseHandler);
     }
 }

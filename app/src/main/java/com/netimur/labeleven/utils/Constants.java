@@ -1,7 +1,7 @@
 package com.netimur.labeleven.utils;
 
 public class Constants {
-    public final static String BASE_URL = "http://192.168.24.142:8080";
+    public final static String BASE_URL = "http://192.168.100.142:8080";
     public final static String AUTH_ENDPOINT = "auth";
     public final static String ELEMENTS_ENDPOINT = "api/elements";
     public final static String MELTINGS_ENDPOINT = "api/meltings";

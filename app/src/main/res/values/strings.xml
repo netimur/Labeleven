@@ -32,7 +32,8 @@
     <string name="chief_code">Chief code:</string>
     <string name="departments">Departments</string>
     <string name="melting">Melting</string>
-    <string name="melting_number">Melting number:</string>
+    <string name="melting_number">Melting number</string>
+    <string name="melting_number_label">Melting number:</string>
     <string name="melting_brand_code">Melting brand code:</string>
     <string name="worker_code_label">Worker code:</string>
     <string name="department_code_label">Department code:</string>
@@ -49,4 +50,18 @@
     <string name="sixth_report">How much of each of the steel grades was smelted this year</string>
     <string name="name_label">Name:</string>
     <string name="dismiss">Dismiss</string>
+    <string name="i_forgot_password">I forgot password</string>
+    <string name="edit_component_melting">Edit component melting</string>
+    <string name="edit_impurity_melting">Edit impurity melting</string>
+    <string name="worker">Worker</string>
+    <string name="impurity_melting">Impurity melting editing</string>
+    <string name="edit">Edit</string>
+    <string name="component_melting_editing">Component melting editing</string>
+    <string name="meltings_list">Melting management</string>
+    <string name="department_chief">Department chief</string>
+    <string name="director">Director</string>
+
+    <string name="dismiss_employee">Dismiss employee</string>
+    <string name="get_report">Get report</string>
+    <string name="month">Month</string>
 </resources>

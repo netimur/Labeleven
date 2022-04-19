@@ -13,4 +13,5 @@
     <dimen name="small_padding">20dp</dimen>
     <dimen name="registration_button_text_size">16sp</dimen>
     <dimen name="registration_buttons_corner_radius">12dp</dimen>
+    <dimen name="mega_large_margin">200dp</dimen>
 </resources>

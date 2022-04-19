@@ -28,6 +28,11 @@ public class AuthorizationPresenter extends AbstractPresenter implements Authori
     public void onAuthButtonClick(String login, String password) {
         //TODO check data
         AuthBody authBody = new AuthBody(login, password);
+        //TODO переделать запрос!!
+        view.onSuccessAuth();
+
+/*
         labApi.postRequest(Constants.AUTH_ENDPOINT, authBody, this);
+*/
     }
 }
